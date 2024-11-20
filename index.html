@@ -17,27 +17,27 @@
         /* Основные стили */
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('bg.jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
             color: #fff;
-            margin: 0 0 15px 0;
+            margin-bottom: 15px;
         }
 
         header {
             padding: 40px 20px;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.8);
-            border-bottom: 3px solid #ff5733;
+            border-bottom: 4px solid #ff5733;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         }
 
@@ -45,7 +45,7 @@
             color: #ff5733;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 10px;
+            margin: 0 12px;
             transition: color 0.3s ease;
         }
 
@@ -57,7 +57,7 @@
         .container {
             max-width: 1200px;
             margin: 40px auto;
-            padding: 30px;
+            padding: 40px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
@@ -87,22 +87,24 @@
 
         .video h3 {
             padding: 15px;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             background-color: #222;
             text-align: center;
+            color: #ff5733;
+            margin: 0;
         }
 
         /* Кнопки */
         button {
-            padding: 12px 25px;
-            font-size: 1.1rem;
+            padding: 12px 30px;
+            font-size: 1.2rem;
             color: white;
             background-color: #ff5733;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            margin: 10px;
+            margin: 15px 10px;
         }
 
         button:hover {
@@ -113,18 +115,19 @@
         /* Опрос */
         .poll {
             background: rgba(0, 0, 0, 0.5);
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             margin-top: 30px;
         }
 
         .poll label {
-            font-size: 1.2rem;
-            margin-right: 15px;
+            font-size: 1.3rem;
+            margin-right: 20px;
             cursor: pointer;
             display: block;
             transition: color 0.3s ease;
+            color: #fff;
         }
 
         .poll input {
@@ -152,7 +155,7 @@
             text-align: center;
             background-color: #222;
             color: white;
-            border-top: 3px solid #ff5733;
+            border-top: 4px solid #ff5733;
             box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
         }
 
@@ -167,21 +170,21 @@
         }
 
         footer button {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         /* Мобильная адаптация */
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 20px;
             }
 
             .video iframe {
-                height: 300px;
+                height: 250px;
             }
 
             .poll label {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             button {
@@ -195,7 +198,7 @@
 <body>
 
 <header>
-    <h1>QQ all, это официальный сайт Itz_Moloko</h1>
+    <h1>Официальный сайт Itz_Moloko</h1>
     <p><a href="https://youtube.com/@itz_molokomain?si=eBQteTiXL--j6dEM" target="_blank">Перейти на канал YouTube</a></p>
     <p><a href="https://t.me/Itz_Moloko" target="_blank">Телеграмм Канал</a></p>
     <p><a href="https://revage.net/" target="_blank">Revage.net</a></p>
@@ -207,8 +210,8 @@
     <section>
         <h2>Последние видео</h2>
         <div class="video">
-            <h3>True Sigma</h3>
-            <iframe src="https://www.youtube.com/embed/sQYbQcJL1m8?si=LEegSdYEG2jrP5-1" frameborder="0" allowfullscreen></iframe>
+            <h3>Вот и мемчик подъехал</h3>
+            <iframe src="https://www.youtube.com/embed/_Uk_vMHHRzY?si=wH1SAISoLSnf6mdU" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <h2>Лучшее видео</h2>
