@@ -4,327 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itz_Moloko - Официальный сайт YouTube канала</title>
+    <title>Itz_Moloko - Официальный сайт</title>
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
-    
-    <meta name="description" content="Добро пожаловать на официальный сайт канала Itz_Moloko! Здесь вы найдете последние видео, новости и ссылки на другие наши ресурсы.">
-    <meta name="keywords" content="Itz_Moloko, Рухайпсель, RuHypixel, итз_молоко, канал Itz_Moloko на YouTube, Minecraft дуэли, лучшие видео Itz_Moloko, новые видео Itz_Mолоко, Minecraft, игровой канал Itz_Moloko, Itz_Moloko Telegram">
-    <meta name="robots" content="index, follow">
-    
+    <meta name="description" content="Официальный сайт канала Itz_Moloko: видео, новости, события, поддержка и контакты.">
+    <meta name="keywords" content="Itz_Moloko, YouTube, RuHypixel, Minecraft, донаты, события, новости, контакты">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
     <style>
         /* Основные стили */
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('bg.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('bg.jpg') no-repeat center center/cover;
             color: #fff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            overflow-x: hidden;
         }
 
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-bottom: 4px solid #ff5733;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-        }
-
-        header a {
             color: #ff5733;
+        }
+
+        a {
             text-decoration: none;
-            font-weight: bold;
-            margin: 0 12px;
+            color: #ff5733;
             transition: color 0.3s ease;
         }
 
-        header a:hover {
+        a:hover {
             color: #ff2e00;
         }
 
-        /* Основной контейнер */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 4px solid #ff5733;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
         .container {
             max-width: 1200px;
             margin: 40px auto;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            padding: 20px;
         }
 
-        /* Видео */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
         .video {
-            margin: 30px 0;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            position: relative;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .video:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
         }
 
         .video iframe {
             width: 100%;
             height: 100%;
-            max-height: 500px;
-            aspect-ratio: 16/9;
+            aspect-ratio: 16 / 9;
         }
 
-        .video h3 {
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .news, .events {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .news-item, .event-item {
             padding: 15px;
-            font-size: 1.6rem;
-            background-color: #222;
-            text-align: center;
-            color: #ff5733;
-            margin: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background-color 0.3s ease;
         }
 
-        /* Кнопки */
-        button {
-            padding: 12px 30px;
+        .news-item:hover, .event-item:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .donations {
+            text-align: center;
+        }
+
+        .donations button {
+            padding: 12px 20px;
             font-size: 1.2rem;
-            color: white;
             background-color: #ff5733;
+            color: #fff;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            margin: 15px 10px;
         }
 
-        button:hover {
+        .donations button:hover {
             background-color: #ff2e00;
             transform: scale(1.05);
         }
 
-        /* Опрос */
-        .poll {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            margin-top: 30px;
-        }
-
-        .poll label {
-            font-size: 1.3rem;
-            margin-right: 20px;
-            cursor: pointer;
-            display: block;
-            transition: color 0.3s ease;
-            color: #fff;
-        }
-
-        .poll input {
-            margin-right: 15px;
-            vertical-align: middle;
-        }
-
-        .poll input[type="radio"]:checked + label {
-            color: #ff5733;
-        }
-
-        /* Результаты опроса */
-        .results {
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.1);
-            margin-top: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: none;
-        }
-
-        /* Подвал */
         footer {
-            padding: 30px 20px;
             text-align: center;
-            background-color: #222;
-            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            background: #222;
+            color: #fff;
             border-top: 4px solid #ff5733;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        footer a {
-            color: #ff5733;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #ff2e00;
-        }
-
-        footer button {
-            margin-top: 15px;
-        }
-
-        /* Мобильная адаптация */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .video iframe {
-                height: 250px;
-            }
-
-            .poll label {
-                font-size: 1.1rem;
-            }
-
-            button {
-                width: 100%;
-                margin: 10px 0;
-            }
         }
     </style>
 </head>
 
 <body>
-
 <header>
     <h1>Официальный сайт Itz_Moloko</h1>
-    <p><a href="https://youtube.com/@itz_molokomain?si=eBQteTiXL--j6dEM" target="_blank">Перейти на канал YouTube</a></p>
-    <p><a href="https://t.me/Itz_Moloko" target="_blank">Телеграмм Канал</a></p>
-    <p><a href="https://revage.net/" target="_blank">Revage.net</a></p>
-    <p><a href="./about.html" target="_blank">Больше информации</a></p>
-    <p><a href="./sob.html" target="_blank">События</a></p>
+    <nav>
+        <a href="#videos">Видео</a>
+        <a href="#news">Новости</a>
+        <a href="#events">События</a>
+        <a href="#donations">Донаты</a>
+        <a href="#contact">Контакты</a>
+    </nav>
 </header>
 
 <main class="container">
-    <section>
-        <h2>Последние видео</h2>
+    <!-- Раздел видео -->
+    <section id="videos" class="section">
+    <div class="video-grid">
         <div class="video">
-            <h3>Вот и мемчик подъехал</h3>
-            <iframe src="https://www.youtube.com/embed/_Uk_vMHHRzY?si=wH1SAISoLSnf6mdU" frameborder="0" allowfullscreen></iframe>
+            <h3>Последнее Видео</h3>
+            <iframe src="https://www.youtube.com/embed/_Uk_vMHHRzY" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <h2>Лучшее видео</h2>
         <div class="video">
-            <h3>[MVP+] Нашёл Тимейта😎[MVP++ ]PLS_BRO_ALT_F4</h3>
-            <iframe src="https://www.youtube.com/embed/XTQIGdmwitc?si=Xkkif7VM7WK1vRmz" frameborder="0" allowfullscreen></iframe>
+            <h3>Лучшее Видео</h3>
+            <iframe src="https://www.youtube.com/embed/XTQIGdmwitc" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <h2>Рекомендую к просмотру</h2>
         <div class="video">
-            <h3>[MVP+] Itz_Moloko кидайте дуэли на РуХайпикселе</h3>
-            <iframe src="https://www.youtube.com/embed/v8rgNzHoGdw?si=FJE1Ezu3V9TDFXEm" frameborder="0" allowfullscreen></iframe>
+            <h3>Также Рекомендую к Просмотру</h3>
+            <iframe src="https://www.youtube.com/embed/v8rgNzHoGdw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    </section>
+
+    <!-- Раздел новостей -->
+    <section id="news" class="section">
+        <h2>Новости</h2>
+        <div class="news">
+            <div class="news-item">Новое видео: "Вот и мемчик подъехал". <a href="https://www.youtube.com/embed/_Uk_vMHHRzY?si=GOv3KxpGVSLZaMQC" target="_blank">Смотреть на YouTube</a></div>
+            <div class="news-item">Запущен новый <a href="https://discord.gg/F7h9Sqfq" target="_blank">Discord-Сервер</a></p></div>
+            <div class="news-item">Идет сбор идей для новых роликов. Поделитесь своими предложениями!</div>
         </div>
     </section>
 
-    <!-- Опрос о видео -->
-    <section class="poll">
-        <h2>Какое видео вам больше всего понравилось?</h2>
-        <label><input type="radio" name="poll-option" value="True Sigma"> True Sigma</label>
-        <label><input type="radio" name="poll-option" value="[MVP+] Нашёл Тимейта"> [MVP+] Нашёл Тимейта</label>
-        <label><input type="radio" name="poll-option" value="[MVP+] Itz_Moloko кидайте дуэли"> [MVP+] Itz_Moloko кидайте дуэли</label>
-        <div>
-            <button onclick="submitPoll()">Отправить голос</button>
-            <button onclick="showResults()">Узнать результаты</button>
+    <!-- Раздел событий -->
+    <section id="events" class="section">
+        <h2>События</h2>
+        <div class="events">
+            <div class="event-item">10 декабря - стрим на Discord в 18:00 МСК.</div>
+            <div class="event-item">25 декабря - Рождественский турнир по Minecraft. Регистрация открыта!</div>
+            <div class="event-item">Новый челлендж для подписчиков: выиграйте PvP с необычными условиями!</div>
         </div>
     </section>
 
-    <!-- Результаты опроса -->
-    <div class="results" id="results"></div>
+    <!-- Раздел донатов -->
+    <section id="donations" class="section">
+        <h2>Поддержите канал</h2>
+        <p>Номер для донатов: <span id="donation-number">2202 2023 2564 6135</span></p>
+        <button onclick="copyDonationNumber()">Копировать номер</button>
+    </section>
+
+    <!-- Раздел контактов -->
+    <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <p>По вопросам писать: <a href="https://t.me/IlDen09" target="_blank">@IlDen09</a></p>
+    </section>
 </main>
 
 <footer>
     <p>&copy; 2023-2024 Itz_Moloko</p>
-    <p>Номер для донатов: 2202 2023 2564 6135</p>
-    <button onclick="copyCode()">Копировать</button>
-    <p>По вопросам писать: <a href="https://t.me/IlDen09" target="_blank">IlDen09</a></p>
 </footer>
 
 <script>
-    let votes = {
-        "True Sigma": 0,
-        "[MVP+] Нашёл Тимейта": 0,
-        "[MVP+] Itz_Moloko кидайте дуэли": 0
-    };
-    let totalVotes = 0;
-
-    function loadVotes() {
-        const savedVotes = JSON.parse(localStorage.getItem('votes'));
-        const savedTotalVotes = localStorage.getItem('totalVotes');
-        if (savedVotes) {
-            votes = savedVotes;
-        }
-        if (savedTotalVotes) {
-            totalVotes = parseInt(savedTotalVotes, 10);
-        }
-    }
-
-    function saveVotes() {
-        localStorage.setItem('votes', JSON.stringify(votes));
-        localStorage.setItem('totalVotes', totalVotes);
-    }
-
-    function submitPoll() {
-        const options = document.querySelectorAll('input[name="poll-option"]');
-        let selectedOption = "";
-        options.forEach(option => {
-            if (option.checked) {
-                selectedOption = option.value;
-            }
-        });
-
-        if (selectedOption) {
-            if (localStorage.getItem('hasVoted')) {
-                alert("Вы уже проголосовали!");
-            } else {
-                votes[selectedOption]++;
-                totalVotes++;
-                localStorage.setItem('hasVoted', 'true');
-                saveVotes();
-                alert("Ваш голос принят! Теперь вы можете узнать результаты.");
-            }
-        } else {
-            alert("Пожалуйста, выберите вариант ответа.");
-        }
-    }
-
-    function showResults() {
-        if (!localStorage.getItem('hasVoted')) {
-            alert("Сначала проголосуйте, чтобы увидеть результаты.");
-            return;
-        }
-        const resultsContainer = document.getElementById("results");
-        resultsContainer.style.display = "block";
-        resultsContainer.innerHTML = "<h2>Результаты опроса:</h2>";
-        for (const option in votes) {
-            const percentage = totalVotes ? ((votes[option] / totalVotes) * 100).toFixed(2) : 0;
-            resultsContainer.innerHTML += `<p>${option}: ${percentage}% (${votes[option]} голосов)</p>`;
-        }
-    }
-
-    window.onload = function () {
-        loadVotes();
-    };
-
-    function copyCode() {
-        const code = "2202 2023 2564 6135";
-        if (confirm("Вы уверены, что хотите скопировать код?")) {
-            navigator.clipboard.writeText(code).then(() => {
-                alert("Код скопирован: " + code);
-            }).catch(err => {
-                console.error("Ошибка при копировании: ", err);
-            });
-        }
+    function copyDonationNumber() {
+        const donationNumber = "2202 2023 2564 6135";
+        navigator.clipboard.writeText(donationNumber)
+            .then(() => alert("Номер для донатов скопирован: " + donationNumber))
+            .catch(err => alert("Не удалось скопировать номер: " + err));
     }
 </script>
 
