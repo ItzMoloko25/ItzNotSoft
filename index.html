@@ -8,6 +8,12 @@
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
     <meta name="description" content="Официальный сайт канала Itz_Moloko: видео, новости, события, поддержка и контакты.">
     <meta name="keywords" content="Itz_Moloko, YouTube, RuHypixel, Minecraft, донаты, события, новости, контакты">
+    <meta name="author" content="Itz_Moloko">
+    <meta property="og:title" content="Itz_Moloko - Официальный сайт">
+    <meta property="og:description" content="Видео, новости, события, поддержка и контакты канала Itz_Moloko.">
+    <meta property="og:image" content="thumbnail.jpg">
+    <meta property="og:url" content="https://itz_moloko.ru">
+    <meta name="twitter:card" content="summary_large_image">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Основные стили */
@@ -137,6 +143,24 @@
             color: #fff;
             border-top: 4px solid #ff5733;
         }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            padding: 10px 15px;
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff2e00;
+        }
     </style>
 </head>
 
@@ -153,62 +177,53 @@
 </header>
 
 <main class="container">
-    <!-- Раздел видео -->
     <section id="videos" class="section">
-    <div class="video-grid">
-        <div class="video">
-            <h3>Последнее Видео</h3>
-            <iframe src="https://www.youtube.com/embed/_Uk_vMHHRzY" frameborder="0" allowfullscreen></iframe>
+        <h2>Видео</h2>
+        <div class="video-grid">
+            <div class="video">
+                <h3>Последнее Видео</h3>
+                <iframe src="https://www.youtube.com/embed/HyryE0-eMaE?si=jVN3ZYElRbNsq32t" frameborder="0" allowfullscreen title="Последнее Видео"></iframe>
+            </div>
+            <div class="video">
+                <h3>Лучшее Видео</h3>
+                <iframe src="https://www.youtube.com/embed/tZ0f68fSJCA?si=un4bAqlQlpIOb2wO" frameborder="0" allowfullscreen title="Лучшее Видео"></iframe>
+            </div>
+            <div class="video">
+                <h3>Рекомендуем к просмотру</h3>
+                <iframe src="https://www.youtube.com/embed/sO4l-VgZSPc?si=qtt92r2KKk5" frameborder="0" allowfullscreen title="Рекомендуем к просмотру"></iframe>
+            </div>
         </div>
-        <div class="video">
-            <h3>Лучшее Видео</h3>
-            <iframe src="https://www.youtube.com/embed/XTQIGdmwitc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <h3>Также Рекомендую к Просмотру</h3>
-            <iframe src="https://www.youtube.com/embed/v8rgNzHoGdw" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
     </section>
-
-    <!-- Раздел новостей -->
     <section id="news" class="section">
         <h2>Новости</h2>
         <div class="news">
-            <div class="news-item">Новое видео: "Вот и мемчик подъехал". <a href="https://www.youtube.com/embed/_Uk_vMHHRzY?si=GOv3KxpGVSLZaMQC" target="_blank">Смотреть на YouTube</a></div>
-            <div class="news-item">Запущен новый <a href="https://discord.gg/F7h9Sqfq" target="_blank">Discord-Сервер</a></p></div>
-            <div class="news-item">Идет сбор идей для новых роликов. Поделитесь своими предложениями!</div>
+            <div class="news-item">Новое видео: "Лунар Клиент БЕЗ ЛИЦЕНЗИИ ЗА 3 МИНУТЫ". <a href="https://www.youtube.com/HyryE0-eMaE?si=XCEocbuM6TF4FG7_" target="_blank" rel="noopener">Смотреть на YouTube</a></div>
+            <div class="news-item">Запущен новый <a href="https://discord.gg/F7h9Sqfq" target="_blank" rel="noopener">Discord-Сервер</a></div>
+            <div class="news-item">На канале уже есть видео как играть в Lunar Client без лицензии.</div>
         </div>
     </section>
-
-    <!-- Раздел событий -->
     <section id="events" class="section">
         <h2>События</h2>
         <div class="events">
             <div class="event-item">10 декабря - стрим на Discord в 18:00 МСК.</div>
-            <div class="event-item">новостей пока нет</div>
-            <div class="event-item">новостей пока нет</div>
+            <div class="event-item">В тг скоро розыгрыш 3 кейса с донатом</div>
         </div>
     </section>
-
-    <!-- Раздел донатов -->
     <section id="donations" class="section">
         <h2>Поддержите канал</h2>
         <p>Номер для донатов: <span id="donation-number">2202 2023 2564 6135</span></p>
         <button onclick="copyDonationNumber()">Копировать номер</button>
     </section>
-
-    <!-- Раздел контактов -->
     <section id="contact" class="section">
         <h2>Контакты</h2>
-        <p>По вопросам писать: <a href="https://t.me/IlDen09" target="_blank">@IlDen09</a></p>
+        <p>По вопросам писать: <a href="https://t.me/IlDen09" target="_blank" rel="noopener">@IlDen09</a></p>
     </section>
 </main>
-
 <footer>
     <p>&copy; 2023-2024 Itz_Moloko</p>
 </footer>
 
+<button class="back-to-top" id="backToTop">Наверх</button>
 <script>
     function copyDonationNumber() {
         const donationNumber = "2202 2023 2564 6135";
@@ -216,8 +231,20 @@
             .then(() => alert("Номер для донатов скопирован: " + donationNumber))
             .catch(err => alert("Не удалось скопировать номер: " + err));
     }
+
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 </script>
-
 </body>
-
 </html>
